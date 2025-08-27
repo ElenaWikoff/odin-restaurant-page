@@ -58,10 +58,6 @@ header .nav ul.nav-menu li.nav-item {
     justify-content: center;
 }
 
-header .nav ul.nav-menu li.nav-item button {
-    /* justify-self: flex-end; */
-}
-
 /* Buttons */
 
 .btn {
@@ -69,6 +65,7 @@ header .nav ul.nav-menu li.nav-item button {
     background: none;
     border: none;
     font-weight: 600;
+    font-size: 1.125rem;
 }
 
 .btn-menu {
@@ -77,7 +74,12 @@ header .nav ul.nav-menu li.nav-item button {
     transition: all 0.15s ease;
 }
 
-.btn-menu:active,
 .btn-menu:hover {
-    border-bottom: 5px solid var(--yellow);
+    border-color: rgb(255, 201, 40, 0.35);
+}
+
+.active .btn-menu,
+.btn-menu.active,
+.btn-menu:active {
+    border-color: var(--yellow);
 }

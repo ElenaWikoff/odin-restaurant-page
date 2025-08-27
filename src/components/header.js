@@ -3,6 +3,19 @@ import Button from "./button.js";
 import { navigate } from "../utils/router.js"
 
 const Header = ({ logoUrl, routes }) => {
+
+    const handleNavigation = (route) => {
+        const navList = document.querySelectorAll(".nav-item");
+        navList.forEach((item) => {
+            if (item.getAttribute("id") === route.title) {
+                item.classList.add("active");
+            } else {
+                item.classList.remove("active");
+            }
+        });
+        navigate(route.page());
+    }
+
     const header = document.createElement("header");
 
     // Logo
@@ -19,10 +32,14 @@ const Header = ({ logoUrl, routes }) => {
     routes.forEach((route) => {
         const navItem = document.createElement("li");
         navItem.classList.add("nav-item");
+        navItem.setAttribute("id", route.title);
+        if (route.title === "Home") {
+            navItem.classList.add("active");
+        }
         const button = Button({
             variant: "menu",
             label: route.title,
-            onClick: () => navigate(route.page()),
+            onClick: () => handleNavigation(route),
         });
         navItem.appendChild(button);
         navMenu.appendChild(navItem);
