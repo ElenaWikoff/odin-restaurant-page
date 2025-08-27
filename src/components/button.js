@@ -1,6 +1,6 @@
 // button.js
 
-const button = ({ variant, label, onClick }) => {
+const Button = ({ variant, label, onClick }) => {
     const btn = document.createElement("button");
     btn.classList.add("btn");
     btn.classList.add(`btn-${variant}`);
@@ -9,4 +9,4 @@ const button = ({ variant, label, onClick }) => {
     return btn;
 }
 
-export default button;
+export default Button;

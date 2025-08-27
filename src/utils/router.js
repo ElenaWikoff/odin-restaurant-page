@@ -1,5 +1,10 @@
 
 export const navigate = (page) => {
     const container = document.getElementById("content");
-    container.replaceChildren(container.firstChild, page);
+    const prevPage = container.firstChild;
+    if (!prevPage) {
+        container.appendChild(page);
+    } else {
+        container.replaceChild(page, container.firstChild);
+    }
 }
