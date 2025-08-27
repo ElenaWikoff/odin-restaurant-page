@@ -19,13 +19,6 @@ footer {
     height: 70px;
 }
 
-main {
-    background-image: url("../assets/images/honeycomb-background.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: calc(100dvh - (var(--header-height) + var(--footer-height)));
-}
-
 /* Header and Nav Menu */
 
 header {
@@ -56,6 +49,31 @@ header .nav ul.nav-menu li.nav-item {
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+/* Main Content */
+
+main {
+    background-image: url("../assets/images/honeycomb-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: calc(100dvh - (var(--header-height) + var(--footer-height)));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffff6f;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    border-radius: 20px;
 }
 
 /* Buttons */
