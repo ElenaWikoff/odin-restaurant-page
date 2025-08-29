@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // Add Content Container
     const container = document.createElement("main");
     container.setAttribute("id", "content");
-    container.appendChild(routes[1].page());
+    container.appendChild(routes[0].page());
     app.appendChild(container);
 
     // Add Footer
