@@ -1,4 +1,5 @@
 import ReviewCard from "../components/review.js";
+import HoursCard from "../components/hours.js";
 
 const reviews = [
     {
@@ -23,6 +24,55 @@ const reviews = [
     },
 ]
 
+const hours = [
+    {
+        weekday: "Monday",
+        range: null
+    },
+    {
+        weekday: "Tuesday",
+        range: {
+            start: "9AM",
+            end: "2PM"
+        }
+    },
+    {
+        weekday: "Wednesday",
+        range: {
+            start: "9AM",
+            end: "2PM"
+        }
+    },
+    {
+        weekday: "Thursday",
+        range: {
+            start: "9AM",
+            end: "2PM"
+        }
+    },
+    {
+        weekday: "Friday",
+        range: {
+            start: "9AM",
+            end: "2PM"
+        }
+    },
+    {
+        weekday: "Saturday",
+        range: {
+            start: "9AM",
+            end: "5PM"
+        }
+    },
+    {
+        weekday: "Sunday",
+        range: {
+            start: "9AM",
+            end: "5PM"
+        }
+    },
+]
+
 const home = () => {
     const section = document.createElement("section");
     section.classList.add("container");
@@ -40,9 +90,13 @@ const home = () => {
         cardGrid.appendChild(reviewCard);
     });
 
+    // Hours
+    const hoursCard = HoursCard({ hours });
+
     // Append Children to section
     section.appendChild(heading);
     section.appendChild(cardGrid);
+    section.appendChild(hoursCard);
 
     return section;
 }
