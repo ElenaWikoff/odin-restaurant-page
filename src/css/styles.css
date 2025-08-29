@@ -9,6 +9,7 @@
     /* Colors */
     --yellow: #ffc928;
     --yellowLight: #ffff6f;
+    --honey: #784600;
 }
 
 body {
@@ -17,6 +18,25 @@ body {
 
 footer {
     height: 70px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    width: 100%;
+    gap: 30px;
+}
+
+/* General */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--honey);
+    text-align: center;
 }
 
 /* Header and Nav Menu */
@@ -69,11 +89,13 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 30px;
     background-color: #ffff6f;
     width: 100%;
     max-width: 1000px;
     height: 100%;
     border-radius: 20px;
+    padding: 30px;
 }
 
 /* Buttons */
@@ -100,4 +122,53 @@ main {
 .btn-menu.active,
 .btn-menu:active {
     border-color: var(--yellow);
+}
+
+/* Review */
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 5px;
+    font-size: 1.125rem;
+    border-left: 5px solid var(--yellow);
+    padding-left: 15px;
+}
+
+.review-card .rating {
+    display: flex;
+    align-self: center;
+    gap: 5px;
+}
+
+.review-card .star {
+    width: 20px;
+    height: 20px;
+    stroke: black;
+    stroke-width: 1px;
+    color: black;
+}
+
+.review-card .star.filled {
+    color: var(--yellow);
+}
+
+.review-card .cite {
+    display: block;
+    align-self: flex-end;
+}
+
+@media screen and (max-width: 767px) {
+    main {
+        height: 100%;
+    }
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-card {
+        font-size: 1rem;
+    }
 }
