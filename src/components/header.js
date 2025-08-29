@@ -2,7 +2,7 @@
 import Button from "./button.js";
 import { navigate } from "../utils/router.js"
 
-const Header = ({ logoUrl, routes }) => {
+const Header = ({ routes }) => {
 
     const handleNavigation = (route) => {
         const navList = document.querySelectorAll(".nav-item");
@@ -21,7 +21,7 @@ const Header = ({ logoUrl, routes }) => {
     // Logo
     const logo = document.createElement("img");
     logo.classList.add("header-logo");
-    logo.setAttribute("src", logoUrl);
+    logo.setAttribute("src", "/src/assets/logos/wannabee-yours-logo.svg");
     logo.setAttribute("alt", "Wannabee Yours Logo");
 
     // Nav Menu

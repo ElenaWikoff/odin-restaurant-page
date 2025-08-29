@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // Add Header
     const app = document.getElementById("app");
     const header = Header({
-        logoUrl: "./assets/logos/wannabee-yours-logo.svg",
         routes,
     });
     app.appendChild(header);
