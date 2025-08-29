@@ -1,9 +1,13 @@
 // index.js
 
+// Pages
 import home from "./pages/home.js";
 import menu from "./pages/menu.js";
 import about from "./pages/about.js";
+
+// Components
 import Header from "./components/header.js";
+import Footer from "./components/footer.js";
 
 const routes = [
     {
@@ -41,7 +45,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
     app.appendChild(container);
 
     // Add Footer
-    const footer = document.createElement("footer");
-    footer.classList.add("footer");
+    const footer = Footer();
     app.appendChild(footer);
 });
