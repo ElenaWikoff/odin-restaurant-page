@@ -18,7 +18,7 @@ const reviews = [
         name: "Jana Beesley"
     },
     {
-        quote: "Amazing! The trenchcoats that kept on buzzing made for weird uniforms though.",
+        quote: "Amazing! But strange that all the employees wore trenchcoats and never spoke outside of buzzing noises.",
         stars: 3,
         name: "Thomas Combs"
     },

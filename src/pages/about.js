@@ -22,7 +22,7 @@ const about = () => {
     iframe.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
     iframe.setAttribute("loading", "lazy");
     iframe.setAttribute("scrolling", "no");
-    
+
     section.appendChild(heading);
     section.appendChild(desc);
     section.appendChild(mapHeader)

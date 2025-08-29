@@ -35,6 +35,10 @@ h6 {
     text-align: center;
 }
 
+ul {
+    padding: 0;
+}
+
 /* Header and Nav Menu */
 
 header {
@@ -44,6 +48,8 @@ header {
     padding-left: 30px;
     padding-right: 30px;
     display: flex;
+    column-gap: 40px;
+    row-gap: 10px;
 }
 
 header .header-logo {
@@ -230,6 +236,7 @@ main {
     display: block;
     justify-self: flex-end;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 /* Menu */
@@ -297,10 +304,30 @@ main {
     .menu-grid {
         grid-template-columns: 1fr;
     }
+
+    .container {
+        padding: 15px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
     main {
+        height: 100%;
+        padding: 15px;
+    }
+
+    header {
+        height: 100%;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .header-logo {
+        height: 100px;
+    }
+
+    footer {
         height: 100%;
     }
 
